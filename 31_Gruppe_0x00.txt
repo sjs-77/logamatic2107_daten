@@ -1,0 +1,2 @@
+3.1 Gruppe 0x00
+Unbekannt - wahrscheinlich programmierbare Parameter der Steuerung.

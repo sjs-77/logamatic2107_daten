@@ -1,0 +1,3 @@
+3.9 Gruppe 0x03
+Unbekannt - möglicherweise Fehlermeldungen. Jeweils 10 Bytes mit den 8 "Nutz-
+Bytes" jeweils auf 0xFF gesetzt.

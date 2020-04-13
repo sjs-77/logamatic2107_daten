@@ -1,0 +1,50 @@
+3.6 Gruppe 0x88 - Bodenstehende Kessel
+Aufgelistet werden nur Werte, die zumindest teilweise geprüft sind.
+
+3.6.1 Wert 1 - 0x2A Soll-Temperatur Kessel
+Soll-Temperatur des Kessels in Grad Celsius. Wird in Abhängigkeit der
+Außentemperatur und der Heizkennlinie berechnet und springt bei Warmwasser-
+Vorrang zusammen mit der Vorlauf-Solltemperatur nach oben.
+
+3.6.2 Wert 2 - 0x2B - Ist-Temperatur Kessel
+Ist-Temperatur des Kessels in Grad Celsius.
+
+3.6.3 Wert 3 - 0x2C - Einschalttemperatur Brenner
+Temperatur des Kessels in Grad Celsius, bei der der Brenner eingeschaltet wird.
+Ändert sich mit Soll-Temperatur des Kessels.
+
+3.6.4 Wert 4 - 0x2D - Einschalttemperatur Brenner
+Temperatur des Kessels in Grad Celsius, bei der der Brenner eingeschaltet wird.
+Ändert sich mit Soll-Temperatur des Kessels.
+
+3.6.5 Wert 8 - 0x31 - Kessel Betrieb
+Ein Byte mit acht verschiedenen Status-Bits zum Zustand des Kessels bzw.
+Brenners:
+   1. Bit (LSB): Abgastest - ist 1, wenn manuell ein Abgastest des Brenners
+           durchgeführt wird.
+   2. Bit: Betriebsstunden 1. Stufe (laut Buderus) - ist 1, wenn der Brenner
+           auf Stufe 1 läuft
+   3. Bit: Kesselschutz (laut Buderus) - ungeprüft
+   4. Bit: unter Betrieb (laut Buderus) - ungeprüft. Sporadisch 1 während 
+           Brennerbetrieb, aber ohne weiter erkennbaren Details.
+   5. Bit: Leistung frei (laut Buderus) - ungeprüft
+   6. Bit: Leistung hoch (laut Buderus) - ungeprüft
+   7. Bit: Betriebsstunden 2. Stufe (laut Buderus) - ungeprüft
+   8. Bit (MSB): Frei (laut Buderus) - ungeprüft
+   
+3.6.6 Wert 9 - 0x32 - Brenneransteuerung
+Nimmt folgende Werte ein:
+-	0: Brenner aus
+-	1: Brenner an in Stufe 1
+-	2: Brenner an in Stufe 2 (laut Buderus - ungeprüft)
+
+3.6.7 Wert 13 - 0x36 Byte 3 Brennerlaufzeit Stufe 1
+Enthält zusammen mit den beiden folgenden Werten den Betriebsstundenzähler des
+Brenners auf Stufe 1.
+(Byte3 * 65536) + (Byte2 * 256) + Byte 1 = Laufzeit in Minuten
+
+3.6.8 Wert 14 - 0x37 Byte 2 Brennerlaufzeit Stufe 1
+Siehe oben
+
+3.6.9 Wert 15 - 0x38 Byte 1 Brennerlaufzeit Stufe 1
+Siehe oben

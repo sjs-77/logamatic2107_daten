@@ -1,0 +1,12 @@
+2 Gruppennummern (1. Byte)
+
+In der Logamatic 2017 existieren folgende Gruppen:
+- 0x00: Unbekannt - wahrscheinlich programmierbare Parameter der Steuerung
+- 0x01: Unbekannt - wahrscheinlich programmierbare Parameter der Steuerung
+- 0x80: Heizkreis 1
+- 0x81: Heizkreis 2
+- 0x84: Warmwasser
+- 0x88: Bodenstehender Kessel
+- 0x89: Konfiguration
+- 0x91: Unbekannt
+- 0x03: Unbekannt - möglicherweise Fehlermeldungen

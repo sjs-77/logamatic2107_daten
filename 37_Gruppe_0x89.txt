@@ -1,0 +1,12 @@
+3.7 Gruppe 0x89 - Konfiguration
+Aufgelistet werden nur Werte, die zumindest teilweise geprüft sind.
+
+3.7.1 Wert 1 - 0x3C - Außentemperatur
+Außentemperatur in Grad Celsius. Zweierkomplement, d.h. gesetztes MSB
+kennzeichnet negative Werte.
+
+3.7.2 Wert 2 - 0x3D - Außentemperatur gedämpft
+Außentemperatur in Grad Celsius. Zweierkomplement, d.h. gesetztes MSB
+kennzeichnet negative Werte. Folgt der gemessenen Außentemperatur mit einigen
+Stunden Verzögerung; dient über die Heizkennlinie zur Berechnung der Vorlauf-
+Solltemperatur der Heizung.

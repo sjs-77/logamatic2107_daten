@@ -1,0 +1,11 @@
+1 Allgemeines
+
+Normalerweise sendet die Logamatic im Drei-Sekunden-Takt ein Daten-Telegramm. Dabei werden immer diejenigen Daten bzw. Statusinformationen gesendet, die sich zuletzt innerhalb der Heizung geändert haben.
+Die einzelnen Datentelegramme haben eine Länge von entweder 3 oder 8 Bytes. Das erste Byte gibt dabei immer eine Gruppe an, in welche die Telegramme in "Themenblöcke" (siehe folgendes Kapitel) eingeteilt sind. Das zweite Byte ist eine laufende Nummer, welche die darauf folgenden Informationen bzw. Daten näher bezeichnet. Dabei gilt:
+- In der Gruppe 0x00 wird das zweite Byte von 0 aus in 8er-Schritten hochgezählt
+- In der Gruppe 0x01 wird das zweite Byte von 0 aus in 8er-Schritten hochgezählt
+- In den Gruppen 0x80, 0x81, 0x84, 0x88, 0x89 und 0x91 wird das zweite Byte von 0 aus über alle Gruppen hinweg in 1er-Schritten hochgezählt
+- In der Gruppe 0x03 wird das zweite Byte von 0 aus in 8er-Schritten hochgezählt
+
+Liegen keine geänderter Werte in der Heizung vor, wird folgendes Telegramm gesendet, wahrscheinlich als ein "Keep Alive"-Signal:
+0x00 0x07 0x01 0x81 0x0E 0xC0 0x04
