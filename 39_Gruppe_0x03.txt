@@ -1,3 +1,3 @@
 3.9 Gruppe 0x03
-Unbekannt - m�glicherweise Fehlermeldungen. Jeweils 10 Bytes mit den 8 "Nutz-
-Bytes" jeweils auf 0xFF gesetzt.
+Unbekannt – möglicherweise Fehlermeldungen. Jeweils 9 Bytes mit dem ersten
+"Nutz-Byte" auf 0x00 und den übrigen 6 "Nutz-Bytes" jeweils auf 0xFF gesetzt.
