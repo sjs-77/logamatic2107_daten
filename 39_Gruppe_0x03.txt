@@ -1,3 +1,8 @@
 3.9 Gruppe 0x03
 Unbekannt – möglicherweise Fehlermeldungen. Jeweils 9 Bytes mit dem ersten
 "Nutz-Byte" auf 0x00 und den übrigen 6 "Nutz-Bytes" jeweils auf 0xFF gesetzt.
+
+3.9.1 Wert 0x00 Fehlerspeicher1
+3.9.2 Wert 0x07 Fehlerspeicher2
+3.9.3 Wert 0x0e Fehlerspeicher3
+3.9.4 Wert 0x15 Fehlerspeicher4
