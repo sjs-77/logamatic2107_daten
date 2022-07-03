@@ -1,2 +1,81 @@
 3.4 Gruppe 0x81 - Heizkreis 2
-Laut Buderus identische Daten zu Heizkreis 1 - ungepr�ft.
+Aufgelistet werden nur Werte, die zumindest teilweise geprüft sind.
+
+3.4.1 Wert 1 - 0x12 - Betriebswerte 1
+Ein Byte mit acht verschiedenen Status-Bits zum Heizkreis:
+   1. Bit (LSB): Ausschaltoptimierung (laut Buderus) - ungeprüft
+   2. Bit: Einschaltoptimierung (laut Buderus) - ungeprüft
+   3. Bit: Automatik - ist 1, wenn an der Heizung die Automatik-Steuerung,
+           d.h., der zeitgesteuerte Wechsel von Tag- und Nacht-Modus
+           aktiviert ist.
+   4. Bit: Warmwasservorrang - ist 1 bei Warmwasservorrang, d.h. solange
+           Warmwasser geheizt wird. Während dieser Zeit werden die Heizkreise
+           vorübergehend nicht betrieben.
+   5. Bit: Estrichtrocknung (laut Buderus) - ungeprüft
+   6. Bit: Ferien (laut Buderus) - ungeprüft
+   7. Bit: Frostschutz (laut Buderus) ungeprüft
+   8. Bit (MSB): Manuell - ist 1, wenn die Automatik-Steuerung (siehe 3. Bit)
+           deaktiviert ist
+   
+3.4.2 Wert 2 - 0x13 - Betriebswerte 2
+Ein Byte mit acht verschiedenen Status-Bits zum Heizkreis:
+   1. Bit (LSB): Sommer (laut Buderus) -  ist 1, wenn die Heizung im Sommer-
+           Modus ist.
+   2. Bit: Tag - ist 1, wenn sich die Heizung im "Tag"-Modus befindet
+   3. Bit: keine Kommunikation mit Fernbedienung (laut Buderus) - ungeprüft
+   4. Bit: Fernbedienung fehlerhaft (laut Buderus) - ungeprüft
+   5. Bit: Fehler Vorlauffühler (laut Buderus) - ungeprüft
+   6. Bit: maximaler Vorlauf (laut Buderus) - ungeprüft
+   7. Bit: externer Störeingang (laut Buderus) - ungeprüft
+   8. Bit (MSB): Party/Pause (laut Buderus) - ungeprüft
+
+3.4.3 Wert 3 - 0x14 - Vorlauftemperatur Soll
+Soll-Temperatur des Heizungsvorlaufs in Grad Celsius. Wird in Abhängigkeit der
+Außentemperatur und der Heizkennlinie berechnet und springt bei Warmwasser-
+Vorrang zusammen mit der Kessel-Solltemperatur nach oben.
+
+3.4.4 Wert 4 - 0x15 - Vorlauftemperatur Ist
+Ist-Temperatur des Heizungsvorlaufs in Grad Celsius.
+
+3.4.5 Wert 5 - 0x16 - Raumtemperatur Soll
+Soll-Temperatur der Räume beziehungsweise des Raumes, in welchem die
+Fernbedienung montiert ist in Schritten von 0,5°C. Falls keine Fernbedienung
+montiert ist, kann die Raum-Solltemperatur an der Logamatic eingestellt werden.
+
+3.4.6 Wert 6 - 0x17 - Raumtemperatur Ist
+Ist-Temperatur des Raumes in welchem die Fernbedienung montiert ist in
+Schritten von 0,5°C. Falls keine Fernbedienung montiert ist, ist hier kein
+sinnvoller Wert enthalten (55°C).
+
+3.4.7 Wert 7 - 0x18 - Einschaltoptimierungszeit
+
+3.4.8 Wert 8 - 0x19 - Ausschaltoptimierungszeit
+
+3.4.9 Wert 9 - 0x1A - Pumpenleistung
+Stellwert für die Heizkreis-Pumpe in % (laut Buderus). Bei der Logamatic 2017
+scheint der Wert nur zwischen 0 (Pumpe läuft nicht) und 100 (Pumpe läuft) zu
+springen.
+
+3.4.10 Wert 10 - 0x1B - Mischerstellung
+
+3.4.11 Wert 11 - 0x1C - nicht belegt
+
+3.4.12 Wert 12 - 0x1D - nicht belegt
+
+3.4.13 Wert 13 - 0x1E - Heizkennlinie +10°C
+Sollwert der Vorlauftemperatur in Grad Celsius gemäß der Heizkennlinie (siehe
+Handbuch) bei +10°C. Ändert sich mit Tag- und Nacht-Modus.
+
+3.4.14 Wert 14 - 0x1F - Heizkennlinie 0°C
+Sollwert der Vorlauftemperatur in Grad Celsius gemäß der Heizkennlinie (siehe
+Handbuch) bei 0°C. Ändert sich mit Tag- und Nacht-Modus.
+
+3.4.15 Wert 15 - 0x20 - Heizkennlinie -10°C
+Sollwert der Vorlauftemperatur in Grad Celsius gemäß der Heizkennlinie (siehe
+Handbuch) bei -10°C. Ändert sich mit Tag- und Nacht-Modus.
+
+3.4.16 Wert 16 - 0x21 - nicht belegt
+
+3.4.17 Wert 17 - 0x22 - nicht belegt
+
+3.4.18 Wert 18 - 0x23 - nicht belegt

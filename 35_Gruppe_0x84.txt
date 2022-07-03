@@ -1,37 +1,56 @@
 3.5 Gruppe 0x84 - Warmwasser
-Aufgelistet werden nur Werte, die zumindest teilweise geprüft sind.
+Aufgelistet werden nur Werte, die zumindest teilweise geprÃ¼ft sind.
 
-3.5.1 Wert 2 - 0x25 - Betriebswerte 2
+3.5.1 Wert 1 - 0x24 - Betriebswerte 1
 Ein Byte mit acht verschiedenen Status-Bits zur Warmwasserbereitung:
-   1. Bit (LSB): Laden (laut Buderus) - ungeprüft
-   2. Bit: Manuell (laut Buderus) - ungeprüft
-   3. Bit: Nachladen (laut Buderus) - ist 1 bei Lade-/Nachlade-Aktivität der
-           Warmwasser-Ladepumpe, jedoch nicht über die komplette Zeit.
+   1. Bit (LSB): Laden (laut Buderus) - ungeprÃ¼ft
+   2. Bit: Manuell (laut Buderus) - ungeprÃ¼ft
+   3. Bit: Nachladen (laut Buderus) - ist 1 bei Lade-/Nachlade-AktivitÃ¤t der
+           Warmwasser-Ladepumpe, jedoch nicht Ã¼ber die komplette Zeit.
            Details bislang unbekannt.
-   4. Bit: Ausschaltoptimierung (laut Buderus) - ungeprüft.
-   5. Bit: Einschaltoptimierung (laut Buderus) - ungeprüft
+   4. Bit: Ausschaltoptimierung (laut Buderus) - ungeprÃ¼ft.
+   5. Bit: Einschaltoptimierung (laut Buderus) - ungeprÃ¼ft
    6. Bit: Tag  - ist 1, wenn sich die Heizung im "Tag"-Modus befindet 
    7. Bit: Warm (laut Buderus) - wird gleichzeitig mit dem 6. Bit 1, aber mit
-           zeitlicher Verzögerung 0. Möglicherweise das Zeitfenster, in dem bei
-           Bedarf noch Warmwasserbereitung, auch über den Tag-Heiz-Modus
+           zeitlicher VerzÃ¶gerung 0. MÃ¶glicherweise das Zeitfenster, in dem bei
+           Bedarf noch Warmwasserbereitung, auch Ã¼ber den Tag-Heiz-Modus
            hinaus, stattfindet.
    8. Bit (MSB): Vorrang - ist 1, solange Warmwasserbereitung mit Vorrang
            stattfindet.
 
-3.5.2 Wert 3 - 0x26 - Warmwasser Soll
-Soll-Temperatur des Warmwassers in Grad Celsius. Ändert sich zwischen Tag- und Nacht-Modus der Heizung.
+3.5.2 Wert 2 - 0x25 - Betriebswerte 2
+Ein Byte mit acht verschiedenen Status-Bits zur Warmwasserbereitung:
+   1. Bit (LSB): Laden (laut Buderus) - ungeprÃ¼ft
+   2. Bit: Manuell (laut Buderus) - ungeprÃ¼ft
+   3. Bit: Nachladen (laut Buderus) - ist 1 bei Lade-/Nachlade-AktivitÃ¤t der
+           Warmwasser-Ladepumpe, jedoch nicht Ã¼ber die komplette Zeit.
+           Details bislang unbekannt.
+   4. Bit: Ausschaltoptimierung (laut Buderus) - ungeprÃ¼ft.
+   5. Bit: Einschaltoptimierung (laut Buderus) - ungeprÃ¼ft
+   6. Bit: Tag  - ist 1, wenn sich die Heizung im "Tag"-Modus befindet 
+   7. Bit: Warm (laut Buderus) - wird gleichzeitig mit dem 6. Bit 1, aber mit
+           zeitlicher VerzÃ¶gerung 0. MÃ¶glicherweise das Zeitfenster, in dem bei
+           Bedarf noch Warmwasserbereitung, auch Ã¼ber den Tag-Heiz-Modus
+           hinaus, stattfindet.
+   8. Bit (MSB): Vorrang - ist 1, solange Warmwasserbereitung mit Vorrang
+           stattfindet.
 
-3.5.3 Wert 4 - 0x27 - Warmwasser Ist
+3.5.3 Wert 3 - 0x26 - Warmwasser Soll
+Soll-Temperatur des Warmwassers in Grad Celsius. Ã„ndert sich zwischen Tag- und Nacht-Modus der Heizung.
+
+3.5.4 Wert 4 - 0x27 - Warmwasser Ist
 Ist-Temperatur des Warmwassers in Grad Celsius.
 
-3.5.4 Wert 6 - 0x29 - Pumpen
+3.5.5 Wert 5 - 0x28 - Warmwasseroptimierungszeit
+
+3.5.6 Wert 6 - 0x29 - Pumpen
 Ein Byte mit acht verschiedenen Status-Bits zur Warmwasserbereitung:
    1. Bit (LSB): Ladepumpe - ist 1, wenn die Ladepumpe, d.h. die Pumpe zwischen
-          Kessel und Warmwasserspeicher läuft.
-   2. Bit: Zirkulationspumpe - ist 1, wenn die Zirkulationspumpe läuft
-   3. Bit: Absenkung Solar (laut Buderus) - ungeprüft
-   4. Bit: Frei (laut Buderus) - ungeprüft
-   5. Bit: Frei (laut Buderus) - ungeprüft
-   6. Bit: Frei (laut Buderus) - ungeprüft
-   7. Bit: Frei (laut Buderus) - ungeprüft
-   8. Bit (MSB): Frei (laut Buderus) - ungeprüft
+          Kessel und Warmwasserspeicher lÃ¤uft.
+   2. Bit: Zirkulationspumpe - ist 1, wenn die Zirkulationspumpe lÃ¤uft
+   3. Bit: Absenkung Solar (laut Buderus) - ungeprÃ¼ft
+   4. Bit: Frei (laut Buderus) - ungeprÃ¼ft
+   5. Bit: Frei (laut Buderus) - ungeprÃ¼ft
+   6. Bit: Frei (laut Buderus) - ungeprÃ¼ft
+   7. Bit: Frei (laut Buderus) - ungeprÃ¼ft
+   8. Bit (MSB): Frei (laut Buderus) - ungeprÃ¼ft

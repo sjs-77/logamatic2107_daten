@@ -1,12 +1,22 @@
 3.7 Gruppe 0x89 - Konfiguration
-Aufgelistet werden nur Werte, die zumindest teilweise geprüft sind.
+Aufgelistet werden nur Werte, die zumindest teilweise geprÃ¼ft sind.
 
-3.7.1 Wert 1 - 0x3C - Außentemperatur
-Außentemperatur in Grad Celsius. Zweierkomplement, d.h. gesetztes MSB
+3.7.1 Wert 1 - 0x3C - AuÃŸentemperatur
+AuÃŸentemperatur in Grad Celsius. Zweierkomplement, d.h. gesetztes MSB
 kennzeichnet negative Werte.
 
-3.7.2 Wert 2 - 0x3D - Außentemperatur gedämpft
-Außentemperatur in Grad Celsius. Zweierkomplement, d.h. gesetztes MSB
-kennzeichnet negative Werte. Folgt der gemessenen Außentemperatur mit einigen
-Stunden Verzögerung; dient über die Heizkennlinie zur Berechnung der Vorlauf-
+3.7.2 Wert 2 - 0x3D - AuÃŸentemperatur gedÃ¤mpft
+AuÃŸentemperatur in Grad Celsius. Zweierkomplement, d.h. gesetztes MSB
+kennzeichnet negative Werte. Folgt der gemessenen AuÃŸentemperatur mit einigen
+Stunden VerzÃ¶gerung; dient Ã¼ber die Heizkennlinie zur Berechnung der Vorlauf-
 Solltemperatur der Heizung.
+
+3.7.3 Wert 3 - 0x3E - Versionsnummer VK (Vorm Komma)
+Die Version der Logamatic Firmware VK.NK
+
+3.7.4 Wert 4 - 0x3F - Versionsnummer NK (Nachm Komma)
+siehe oben
+
+3.7.5 Wert 5 - 0x40 - Modulkennung
+
+3.7.6 Wert 6 - 0x41 - nicht belegt
