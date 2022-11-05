@@ -11,10 +11,10 @@ kennzeichnet negative Werte. Folgt der gemessenen Außentemperatur mit einigen
 Stunden Verzögerung; dient über die Heizkennlinie zur Berechnung der Vorlauf-
 Solltemperatur der Heizung.
 
-3.7.3 Wert 3 - 0x3E - Versionsnummer VK (Vorm Komma)
-Die Version der Logamatic Firmware VK.NK
+3.7.3 Wert 3 - 0x3E - Versionsnummer (Hauptversionsnummer, HV)
+Die Version der Logamatic-Firmware im Format "HV.NV"
 
-3.7.4 Wert 4 - 0x3F - Versionsnummer NK (Nachm Komma)
+3.7.4 Wert 4 - 0x3F - Versionsnummer (Nebenversionsnummer, NV)
 siehe oben
 
 3.7.5 Wert 5 - 0x40 - Modulkennung
